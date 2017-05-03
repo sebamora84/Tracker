@@ -5,7 +5,7 @@ include_once '../Models/UserManager.php';
 $um = new UserManager();
 
 $index = $um->createResource(1,"","Inicio",false);
-
+$reports = $um->createResource(10,"consumptions.html","Consumos",true);
 $reports = $um->createResource(15,"reports.html","Reportes",true);
 $users = $um->createResource(16,"users.html","Usuarios",true);
 $system = $um->createResource(17,"system.html","Sistema",true);

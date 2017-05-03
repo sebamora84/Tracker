@@ -1,0 +1,92 @@
+<?php
+require './Api/User/VerifySession.php';
+require './Api/Controls/Buttons.php';
+verifySession();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tracker - Consumos</title>
+<link rel="icon" type="image/png" href="/Images/icon.png">
+<link rel="stylesheet" href="./Styles/styles.css">
+<link rel="stylesheet" href="./Styles/jquery-ui.min.css">
+<link rel="stylesheet" href="./Scripts/jquery.datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="./Scripts/jquery.jqplot.min.css" />
+<script src="./Scripts/jquery-3.1.1.min.js"></script>
+<script src="./Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="./Scripts/jquery.datetimepicker.full.min.js"></script>
+<script src="./Scripts/jquery.jqplot.min.js"></script>
+<script src="./Scripts/jqplot.cursor.js"></script>
+<script src="./Scripts/jqplot.highlighter.js"></script>
+<script src="./Scripts/jqplot.dateAxisRenderer.js"></script>
+<script src="./Scripts/moment.min.js"></script>
+<script src="./Scripts/consumptions.js"></script>
+</head>
+<body>
+	<div id="consumptionsWraper" class="wrapper">
+		<div class="logoheaderwrap">
+			<div class="logoheader">
+				<div class="logo">
+					<a href="./"> <img src="Images/logo.png" alt="Tracker"
+						width="auto" height="30">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="headerwrap">
+			<div class="header">
+				<div class="session">
+					<?php 
+							profileButton();
+							sessionButton();
+						?>
+				</div>
+			</div>
+		</div>
+		<div class="navigationwrap">
+			<div class="navigation">
+				<?php 
+						menuButtons();
+					?>
+			</div>
+		</div>
+		<div class="leftcolumnwrap">
+			<div class="leftcolumn">
+				<div>
+					<label>Navíos</label>
+				</div>
+				<div>
+					<select>
+						<option value="1">Remolcador TAGUATO</option>
+					</select>
+				</div>
+				<div>
+					<label for="dateFrom">Desde</label> <input type="text"
+						id="dateFrom">
+				</div>
+				<div>
+					<label for="dateFrom">Hasta</label> <input type="text" id="dateTo">
+				</div>
+				
+				<div >
+					<button id="chartExecute">Consultar</button>	
+				</div>
+			</div>
+		</div>
+		<div class="middlecolumnwrap">
+			<div class="middlecolumn"></div>
+		</div>
+		<div class="rightcolumnwrap">
+			<div class="rightcolumn">
+				<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+			</div>
+		</div>
+		<div class="poweredwrap">
+			<div class="powered">
+				<label> Powered by <a
+					href="http://www.linkedin.com/in/sebastian-mora-b1785131">SM</a></label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -372,6 +372,18 @@ tr:active {
     overflow-x:hidden; 
 }
 
+/*consumptions*/
+#consumptionsWraper .leftcolumnwrap {
+    width: 400px;
+}
+#consumptionsWraper .middlecolumnwrap {
+    width: 0px;
+}
+
+#consumptionsWraper .rightcolumnwrap {
+    width: 800px;
+}
+
 /*Profile*/
 
 #pswd_incorrect {
